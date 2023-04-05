@@ -88,3 +88,4 @@ $prefix= md5(time()*rand(1, 2)); echo strip_tags(substr($prefix ,0,10));?>" read
 
 
         <?php include"footer.php"; ?>
+        <!-- gsgs -->
