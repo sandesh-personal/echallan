@@ -2,7 +2,7 @@
             <div class="container-fluid">
                 
                 <p class="copyright pull-right">
-                    &copy; <script>document.write(new Date().getFullYear())</script> <a href="http://www.lykup.com">Hillsofts</a>, made with love for a better web
+                    &copy; <script>document.write(new Date().getFullYear())</script> <a href="#">FYP</a>, Hearld College Kathmandu
                 </p>
             </div>
         </footer>
@@ -37,14 +37,14 @@
 
         	demo.initChartist();
 
-        	$.notify({
-            	icon: 'pe-7s-gift',
-            	message: "Welcome to <b>Trafity</b> Traffic Offence System."
+        	// $.notify({
+            // 	icon: 'pe-7s-gift',
+            // 	message: "Welcome to <b>Trafity</b> Traffic Offence System."
 
-            },{
-                type: 'info',
-                timer: 4000
-            });
+            // },{
+            //     type: 'info',
+            //     timer: 4000
+            // });
 
     	});
 	</script>
