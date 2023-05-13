@@ -167,8 +167,13 @@
                                             <td style="background-color:#3dd;">Date of Offense:</td>
                                             <td><?php echo date('l jS \of F Y h:i:s A'); ?></td>
                                         </tr>
+                                        <tr>
+                                            <td style="background-color:#3dd;">Pay Online:</td>
+                                            <td><?php echo '<button id="payment-button">Pay with Khalti</button>'; ?></td>
+                                        </tr>
                                     </tbody>
                                 </table>
+                                <div id="payment-status"></div>
                             </div>
                         </div>
                     </div>
@@ -250,8 +255,48 @@
     
     </div>
     </div>
+    <script src="https://khalti.s3.ap-south-1.amazonaws.com/KPG/dist/2020.12.17.0.0.0/khalti-checkout.iffe.js"></script></script>
+    <script>
+        var config = {
+            // replace the publicKey with yours
+            "publicKey": "test_public_key_04d7d58897db4e159f83a66949d0d52c",
+            "productIdentity": "1234567890",
+              "productName": "Test Product",
+              "productUrl": "http://example.com/test-product",
+              "paymentPreference": [
+                "KHALTI",
+                "EBANKING",
+                "MOBILE_BANKING",
+                "CONNECT_IPS",
+                "SCT",
+              ],
+              "eventHandler": {
+                onSuccess(payload) {
+                  // Handle successful payment
+                  console.log(payload);
+                  // Update the payment status message
+                  document.getElementById('payment-status').innerHTML = 'Payment successful!';
+                },
+                onError(error) {
+                  // Handle payment error
+                  console.log(error);
+                  // Update the payment status message
+                  document.getElementById('payment-status').innerHTML = 'Payment failed.';
+                },
+                onClose() {
+                  // Handle checkout widget close event
+                  console.log('Widget closed');
+                }
+              }
+            };
 
-
+            var checkout = new KhaltiCheckout(config);
+            var btn = document.getElementById("payment-button");
+            btn.onclick = function() {
+              // Show the Khalti checkout widget when the user clicks on the payment button
+              checkout.show({amount: 1000}); // Replace 1000 with your actual payment amount in paisa
+            };
+</script>
 </body>
 
 </html>
