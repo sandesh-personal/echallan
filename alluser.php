@@ -61,7 +61,7 @@
 </head>
 
 <body>
-    <h2>&nbsp;&nbsp;Search by Offence Id</h2>
+    <h2>&nbsp;&nbsp;Search By Offence ID</h2>
     <form action="alluser.php" method="post">
         <label for="id">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
         <input type="text" id="myInput" name="id">
@@ -247,7 +247,7 @@
             </p>
         </div>
     </footer>
-
+    
     </div>
     </div>
 
