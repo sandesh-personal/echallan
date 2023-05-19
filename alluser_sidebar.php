@@ -6,14 +6,20 @@ include('connect.php');
 <html lang="en">
 
 <head>
+
+    <!-- combination of HTML and PHP -->
     <meta charset="utf-8" />
     <link rel="icon" type="image/png" href="assets/img/favicon.ico">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <!-- encoding, favicon, and compatibility settings for the web page -->
     <?php
     $result = $db->prepare("SELECT * FROM site_settings WHERE id=1");
     $result->execute();
     for ($i = 0; $row = $result->fetch(); $i++) {
     ?>
+
+        <!-- retrieving the site settings from a database using select query -->
         <title><?php echo $row['site_name']; ?></title>
 
         <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -54,12 +60,6 @@ include('connect.php');
     <div class="wrapper">
         <div class="sidebar" data-color="green" data-image="assets/img/sidebar-5.jpg">
 
-            <!--
-
-        Tip 1: you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple"
-        Tip 2: you can also add an image using data-image tag
-
-    -->
 
             <div class="sidebar-wrapper">
                 <div class="logo">
@@ -97,15 +97,6 @@ include('connect.php');
                         </button>
                     </div>
                     <div class="collapse navbar-collapse">
-                        <!-- <ul class="nav navbar-nav navbar-left">
-                            <li>
-                                <a href="index.php" class="dropdown-toggle" data-toggle="dropdown">
-                                    <i class="fa fa-dashboard"></i>
-                                    <p class="hidden-lg hidden-md">Dashboard</p>
-                                </a>
-                            </li>
-
-                        </ul> -->
 
                         <ul class="nav navbar-nav navbar-right">
                             <li>
