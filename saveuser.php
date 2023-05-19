@@ -19,7 +19,7 @@ $message = "Hello " . $b . ", "
 . "Your account has been created successfully.<br>"
 . "Username: " . $c . "<br>"
 . "Password: " . $d . "<br>"
-. "Thank you for registering with us!<br>"
+. "Welcome to E-Challan Famaily!<br>"
 . "Best regards,<br>"
 . "Echallan"; 
 // query

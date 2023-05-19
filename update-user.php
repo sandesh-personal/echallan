@@ -13,8 +13,6 @@
         WHERE id='$user'";
 
 
-    //$sql = "INSERT INTO settings (site_name,site_title,email,site_keyword,street,city,country,phone,facebook,twitter,linkedin,status) VALUES (:a,:b,:c,:d,:e,:f,:g,:h,:i,:j,:k,:l)";
-
     $q = $db->prepare($sql);
     $q->execute(array($a, $b, $c)); {
         if ($q) {
