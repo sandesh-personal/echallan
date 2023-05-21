@@ -116,11 +116,15 @@
                                         <input type="text" class="form-control" name="custom_offense">
                                     </div>
                                     <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label>Fine Amount</label>
-                                                <input type="number" name="amount" class="form-control" placeholder="400">
-                                            </div>
+                                    <div class="col-md-12">
+                                         <div class="form-group">
+                                        <label>Fine Amount</label>
+                                            <div class="input-group">
+                                            <span class="input-group-addon">Rs</span>
+                                            <input type="number" name="amount" class="form-control" placeholder="Amount" min="1">
+                                        </div>
+                                     </div>
+                                    </div>
                                         </div>
                                     </div>
                                 </div>
@@ -136,7 +140,6 @@
 
     </div>
 </div>
-<div> <?php include "footer.php"; ?>
 </div>
 <script>
     // Function to handle custom offense option
@@ -157,3 +160,4 @@
 </script>
 
 
+<?php include "footer.php"; ?>
