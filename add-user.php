@@ -16,11 +16,15 @@
                                 <form action="saveuser.php" method="post">
                                     <div class="row">
                                         <div class="col-md-5">
-                                            <div class="form-group">
-                                                <label>User ID</label>
-                                                <input type="text" name="user_id" class="form-control" placeholder="Company" value="<?php 
-$prefix= md5(time()*rand(1, 2)); echo strip_tags(substr($prefix ,0,10));?>" readonly>
-                                            </div>
+                                        <div class="form-group">
+                                         <!-- Start of form group -->
+                                        <label>User ID</label>
+                                        <!-- Label for the input field -->
+                                        <input type="text" name="user_id" class="form-control" placeholder="Company" value="<?php 
+                                        $prefix= md5(time()*rand(1, 2)); echo strip_tags(substr($prefix ,0,10));?>" readonly>
+                                        <!-- Input field with type, name, class, placeholder, value, and readonly attributes -->
+                                        </div>
+
                                         </div>
                                         <div class="col-md-3">
                                             <div class="form-group">

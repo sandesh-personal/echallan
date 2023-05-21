@@ -68,7 +68,7 @@ h1, .h1 {
 }
 
 h2, .h2 {
-    font-size: 36px;
+    font-size: 30px;
 }
 
 h3, .h3 {
@@ -219,18 +219,18 @@ input:focus {
 }
 
 .sidebar {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: auto;
-    left: 0;
-    width: 260px;
-    display: block;
-    z-index: 1;
-    color: #fff;
-    font-weight: 200;
-    background-size: cover;
-    background-position: center center;
+    position: fixed; /* Fix the position */
+    top: 0; /* Position from the top */
+    bottom: 0; /* Position from the bottom */
+    right: auto; /* Reset the right position */
+    left: 0; /* Position from the left */
+    width: 260px; /* Set the width to 260px */
+    display: block; /* Display as a block element */
+    z-index: 1; /* Set the stacking order */
+    color: #fff; /* Set the text color to white */
+    font-weight: 200; /* Set the font weight */
+    background-size: cover; /* Adjust background image size */
+    background-position: center center; /* Position the background image */
 }
 
 .sidebar .sidebar-wrapper {
@@ -2252,7 +2252,6 @@ fieldset[disabled] .btn-neutral.active {
 .card .category,
 .card label {
     font-size: 14px;
-    font-weight: bold;
     color: #000000;
     margin-bottom: 0px;
 }
@@ -3829,38 +3828,51 @@ fieldset[disabled] .btn-neutral.active {
 }
 
 @media (min-width: 992px) {
+    /* Styles for screens with a minimum width of 992px */
+    
     .table-full-width {
-        margin-left: -15px;
-        margin-right: -15px;
+        margin-left: -15px; /* Apply negative left margin */
+        margin-right: -15px; /* Apply negative right margin */
     }
+    
     .table-responsive {
-        overflow: visible;
+        overflow: visible; /* Set overflow to visible */
     }
+    
     .navbar-nav p {
-        line-height: normal;
-        margin: 0;
+        line-height: normal; /* Reset line height */
+        margin: 0; /* Reset margin */
     }
 }
 
+
 @media (max-width: 991px) {
+    /* Styles for screens with a maximum width of 991px */
+    
     .table-responsive {
-        width: 100%;
-        margin-bottom: 15px;
-        overflow-x: scroll;
-        overflow-y: hidden;
-        -ms-overflow-style: -ms-autohiding-scrollbar;
-        -webkit-overflow-scrolling: touch;
+        width: 100%; /* Set the width to 100% */
+        margin-bottom: 15px; /* Add bottom margin of 15px */
+        overflow-x: scroll; /* Enable horizontal scrolling */
+        overflow-y: hidden; /* Hide vertical scrollbar */
+        -ms-overflow-style: -ms-autohiding-scrollbar; /* Hide scrollbar on Microsoft Edge */
+        -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on WebKit-based browsers */
     }
 }
+
 
 #myInput {
     background-image: url('/css/searchicon.png'); /* Add a search icon to input */
     background-position: 10px 12px; /* Position the search icon */
     background-repeat: no-repeat; /* Do not repeat the icon image */
-    width: 80%; /* Full-width */
+    width: 100%; /* Full-width */
     font-size: 16px; /* Increase font-size */
     padding: 12px 20px 12px 40px; /* Add some padding */
-    border: 1px solid #ddd; /* Add a grey border */
+    border: 1px solid #4bd013; /* Add a green border */
     margin-bottom: 12px; /* Add some space below the input */
+    
+    /* Center horizontally */
+    margin-left: auto;
+    margin-right: auto;
 }
+
 
