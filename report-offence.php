@@ -136,6 +136,7 @@
 
     </div>
 </div>
+<div> <?php include "footer.php"; ?>
 </div>
 <script>
     // Function to handle custom offense option
@@ -156,4 +157,3 @@
 </script>
 
 
-<?php include "footer.php"; ?>
