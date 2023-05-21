@@ -470,7 +470,7 @@ button:hover {
 
 .copy p {
     font-family: 'Open Sans', sans-serif;
-    margin: 0em;
+    margin: -1em;
     text-align: center;
     font-size: 15px;
     color: rgb(0, 0, 0);

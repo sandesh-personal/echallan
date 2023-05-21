@@ -6,7 +6,6 @@
                 <div class="card">
                     <div class="header">
                         <h4 class="title">Offence Table</h4>
-                        <p class="category">Here is a list of all Offences</p>
                     </div>
                     <div class="content table-responsive table-full-width">
 

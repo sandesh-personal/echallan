@@ -81,7 +81,10 @@
  									</tr>
  									<tr>
  										<td style="background-color:#3dd;">Date of Offense:</td>
- 										<td><?php echo date('l jS \of F Y h:i:s A'); ?></td>
+ 										<td>
+											<?php date_default_timezone_set('Asia/Kathmandu');
+											echo date('l jS \of F Y h:i A');?></td>
+
  									</tr>
  								</tbody>
  							</table>

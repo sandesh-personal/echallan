@@ -54,7 +54,7 @@ td,
 button.close {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    font-family: "Roboto","Helvetica Neue",Arial,sans-serif;
+    font-family: "Arial","sans-serif";
     font-weight: 400;
 }
 
@@ -1238,9 +1238,9 @@ fieldset[disabled] .btn-neutral.active {
 .table > thead > tr > th {
     border-bottom-width: 1px;
     font-size: 12px;
+    font-weight: bold;
     text-transform: uppercase;
-    color: #9A9A9A;
-    font-weight: 400;
+    color: #000000;
     padding-bottom: 5px;
 }
 
@@ -1720,7 +1720,7 @@ fieldset[disabled] .btn-neutral.active {
 }
 
 .navbar.fixed {
-    width: calc(100% - $sidebar-width);
+    width: calc(100% - 200px); /* Replace 200px with the actual width of the sidebar */
     right: 0;
     left: auto;
     border-radius: 0;
@@ -2252,8 +2252,8 @@ fieldset[disabled] .btn-neutral.active {
 .card .category,
 .card label {
     font-size: 14px;
-    font-weight: 400;
-    color: #9A9A9A;
+    font-weight: bold;
+    color: #000000;
     margin-bottom: 0px;
 }
 
@@ -2270,8 +2270,8 @@ fieldset[disabled] .btn-neutral.active {
 
 .card .title {
     margin: 0;
-    color: #333333;
-    font-weight: 300;
+    color: #000000;
+    font-weight: bold;
 }
 
 .card .avatar {
