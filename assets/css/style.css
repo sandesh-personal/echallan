@@ -301,7 +301,7 @@ ul {
 /*-- //Reset-Code --*/
 
 body {
-    background: url(https://www.hikvision.com/content/hikvision/ar/newsroom/blog/beating-traffic-jams-with-intelligent-video-technology/_jcr_content/root/responsivegrid/image.coreimg.100.1280.jpeg/1681265736888/beating-traffic-jams-with-intelligent-video-technology.jpeg) no-repeat center/cover;
+    background: url(https://savefrominternet.com/wp-content/uploads/2023/05/login-image-1536x864.jpg) no-repeat center/cover;
     min-height: 100vh;
 }
 
@@ -372,7 +372,7 @@ h1.header-w3ls {
 
 .icon-head h2 {
     font-size: 64px;
-    color: #ffffff;
+    color: #000000;
     text-align: center;
     border-bottom: 1px solid #fff; /* Corrected capitalization of #fff */
     margin: 27px 0px 25px;
@@ -473,11 +473,11 @@ button:hover {
     margin: 0em;
     text-align: center;
     font-size: 15px;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .copy p a {
-    color: #fff;
+    color: #000000;
     text-decoration: none;
 }
 

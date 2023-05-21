@@ -43,7 +43,7 @@ include "connect.php";
 								</div> -->
 			<div class="content">
 				<div class="icon-head">
-					<h2>Login Here</h2>
+					<h2>Admin Login</h2>
 				</div>
 				<div class="form-left-w3l">
 					<input type="text" name="username" placeholder="Username" required="">
