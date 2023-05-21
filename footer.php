@@ -37,15 +37,6 @@
 
         	demo.initChartist();
 
-        	// $.notify({
-            // 	icon: 'pe-7s-gift',
-            // 	message: "Welcome to <b>Trafity</b> Traffic Offence System."
-
-            // },{
-            //     type: 'info',
-            //     timer: 4000
-            // });
-
     	});
 	</script>
 	

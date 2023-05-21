@@ -5,7 +5,6 @@ include "connect.php";
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from p.w3layouts.com/demos_new/template_demo/10-02-2018/donuts_login_form-demo_Free/1224104968/web/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 29 May 2018 02:38:29 GMT -->
 <!-- Added by HTTrack -->
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 
@@ -37,26 +36,25 @@ include "connect.php";
 
 	<div class="swm-right-w3ls">
 		<form action="login2.php" method="post">
-			<!-- <div class=" header-side">
-									
-									
-								</div> -->
+	
 			<div class="content">
 				<div class="icon-head">
 					<h2>Admin Login</h2>
 				</div>
 				<div class="form-left-w3l">
-					<input type="text" name="username" placeholder="Username" required="">
-					<div class="clear"></div>
+    				<input type="text" name="username" id="username" placeholder="Username" required="">
+    			<div class="clear"></div>
 				</div>
-				<div class="form-right-w3ls ">
-					<input type="password" name="pass" placeholder="Password" required="">
-					<div class="clear"></div>
+				<div class="form-right-w3ls">
+    				<input type="password" name="pass" id="password" placeholder="Password" required="">
+    			<div class="clear"></div>
 				</div>
+				<div id="error-message"></div>
+
+
 				<div class="btnn">
 					<button type="submit">Login</button>
 					<br>
-
 				</div>
 			</div>
 		</form>
