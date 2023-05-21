@@ -21,7 +21,7 @@
                                 table = document.getElementById("myTable");
                                 tr = table.getElementsByTagName("tr");
 
-                                // Loop through all table rows, and hiding those who don't match the search query
+                                // Loop through all table rows, and hide those who don't match the search query
                                 for (i = 0; i < tr.length; i++) {
                                     td = tr[i].getElementsByTagName("td")[0];
                                     if (td) {
@@ -93,12 +93,42 @@
 </div>
 </div>
 
+
 </body>
+
+<!--   Core JS Files   -->
+<script src="assets/js/jquery.3.2.1.min.js" type="text/javascript"></script>
+<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+
+<!--  Charts Plugin -->
+<script src="assets/js/chartist.min.js"></script>
+
+<!--  Notifications Plugin    -->
+<script src="assets/js/bootstrap-notify.js"></script>
+
+<!--  Google Maps Plugin    -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+
+<!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
+<script src="assets/js/light-bootstrap-dashboard.js?v=1.4.0"></script>
+
+<!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
+<script src="assets/js/demo.js"></script>
 
 <script type="text/javascript">
     $(document).ready(function() {
 
         demo.initChartist();
+
+        // $.notify({
+        // 	icon: 'pe-7s-gift',
+        // 	message: "Welcome to <b>Trafity Dashboard</b> - a beautiful Traffic Offence System."
+
+        // },{
+        //     type: 'info',
+        //     timer: 4000
+        // });
+
     });
 </script>
 

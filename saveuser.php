@@ -15,13 +15,13 @@ $e = $_POST['email'];
 $f = $_POST['address'];
 $g = $_POST['position'];
 $sub = "Account Deatils";
-$message = "Hello " . $b . ", "
-. "Your account has been created successfully.<br>"
-. "Username: " . $c . "<br>"
-. "Password: " . $d . "<br>"
-. "Welcome to E-Challan Famaily!<br>"
-. "Best regards,<br>"
-. "Echallan"; 
+$message = "Hello " . $b . ",\n\n"
+. "Your account has been created successfully.\n\n"
+. "Username: " . $c . "\n"
+. "Password: " . $d . "\n\n"
+. "Thank you for registering with us!\n\n"
+. "Best regards,\n"
+. "TMS"; 
 // query
 $sql = "INSERT INTO user (user_id,name,username,pass,email,address,position) VALUES (:a,:b,:c,:d,:e,:f,:g)";
 $q = $db->prepare($sql);
@@ -32,8 +32,8 @@ $q->execute(array(':a' => $a, ':b' => $b, ':c' => $c, ':d' => $d, ':e' => $e, ':
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'sandeshkoiralait@gmail.com';
-        $mail->Password = 'siiemqtjvrgdifwz';
+        $mail->Username = 'sumansthahope@gmail.com';
+        $mail->Password = 'scsuwutitasuxpzx';
         $mail->Port = 465;
         $mail->SMTPSecure = 'ssl';
         $mail->isHTML(true);

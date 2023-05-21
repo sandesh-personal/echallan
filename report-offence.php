@@ -19,8 +19,8 @@
                                     <div class="form-group">
                                         <label>Offense ID</label>
                                         <input type="text" name="offence_id" class="form-control" placeholder="Offense ID" value="<?php
-                                                                                        $prefix = md5(time() * rand(1, 2));
-                                                                                        echo strip_tags(substr($prefix, 0, 6)); ?>" readonly>
+                                                                                                                                    $prefix = md5(time() * rand(1, 2));
+                                                                                                                                    echo strip_tags(substr($prefix, 0, 6)); ?>" readonly>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
@@ -116,14 +116,13 @@
                                         <input type="text" class="form-control" name="custom_offense">
                                     </div>
                                     <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                        <label>Fine Amount</label>
-                                            <div class="input-group">
-                                                <span class="input-group-addon">Rs</span> <!-- Add currency symbol here -->
-                                                <input type="number" name="amount" class="form-control" placeholder="Amount">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Fine Amount</label>
+                                                <input type="number" name="amount" class="form-control" placeholder="400">
                                             </div>
-                                         </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-info btn-fill pull-right">Report Offence</button>
@@ -137,7 +136,6 @@
 
     </div>
 </div>
-<div> <?php include "footer.php"; ?>
 </div>
 <script>
     // Function to handle custom offense option
@@ -158,3 +156,4 @@
 </script>
 
 
+<?php include "footer.php"; ?>

@@ -61,7 +61,7 @@
 </head>
 
 <body>
-    <h2>&nbsp;&nbsp;Search By Offence ID</h2>
+    <h2>&nbsp;&nbsp;Search by Offence Id</h2>
     <form action="alluser.php" method="post">
         <label for="id">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
         <input type="text" id="myInput" name="id">
@@ -167,13 +167,8 @@
                                             <td style="background-color:#3dd;">Date of Offense:</td>
                                             <td><?php echo date('l jS \of F Y h:i:s A'); ?></td>
                                         </tr>
-                                        <tr>
-                                            <td style="background-color:#3dd;">Pay Online:</td>
-                                            <td><?php echo '<button id="payment-button">Pay with Khalti</button>'; ?></td>
-                                        </tr>
                                     </tbody>
                                 </table>
-                                <div id="payment-status"></div>
                             </div>
                         </div>
                     </div>
@@ -187,7 +182,61 @@
             } ?>
 
 
+    <!-- <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="header">
+                            <h4 class="title">Offence Table</h4>
+                            <p class="category">Here is a list of all Offences</p>
+                        </div>
+                        <div class="content table-responsive table-full-width">
 
+                            <label for="filter">&nbsp;&nbsp;&nbsp;</label> <input type="text" name="filter" value="" id="myInput" placeholder="Search with offence ID" onkeyup="myFunction()" />
+
+
+                            <table class="table table-hover table-striped" id="myTable">
+                                <thead>
+                                    <th>Offence ID</th>
+                                    <th>Offence</th>
+                                    <th>Offender</th>
+                                    <th>Reporter</th>
+                                    <th>Address</th>
+
+                                </thead>
+                                <tbody>
+                                    //php
+                                    //$result = $db->prepare("SELECT * FROM reported_offence ORDER BY id DESC");
+                                    $result->execute();
+                                    for ($i = 0; $row = $result->fetch(); $i++) {
+                                    ?>
+                                        <tr>
+                                            <td><php echo $row['offence_id']; ?></td>
+                                            <td><a title="Click to view details" href="offence-detail.php?id=<php echo $row['id']; ?>"><php echo $row['offence']; ?></a></td>
+                                            <td><php echo $row['name']; ?></td>
+                                            <td><php echo $row['officer_reporting']; ?></td>
+                                            <td><php echo $row['address']; ?></td>
+
+
+                                        </tr>
+                                    ?php } ?>
+                                </tbody>
+                            </table>
+
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    </div>
+    </div> -->
     <footer class="footer">
         <div class="container-fluid">
 
@@ -198,57 +247,10 @@
             </p>
         </div>
     </footer>
-    
-    </div>
-    </div>
-    <script src="https://khalti.s3.ap-south-1.amazonaws.com/KPG/dist/2020.12.17.0.0.0/khalti-checkout.iffe.js"></script></script>
-    <script>
-        var config = {
-            // replace the publicKey with yours
-            "publicKey": "test_public_key_04d7d58897db4e159f83a66949d0d52c",
-            "productIdentity": "1234567890",
-              "productName": "Test Product",
-              "productUrl": "http://example.com/test-product",
-              "paymentPreference": [
-                "KHALTI",
-              ],
-              "eventHandler": {
-                onSuccess(payload) {
-                  // Handle successful payment
-                  console.log(payload);
-                  // Update the payment status message
-                  document.getElementById('payment-status').innerHTML = 'Payment successful!';
-                },
-                onError(error) {
-                  // Handle payment error
-                  console.log(error);
-                  // Update the payment status message
-                  document.getElementById('payment-status').innerHTML = 'Payment failed.';
-                },
-                onClose() {
-                  // Handle checkout widget close event
-                  console.log('Widget closed');
-                }
-                
-              }
-            };
 
-            var checkout = new KhaltiCheckout(config);
-            var btn = document.getElementById("payment-button");
-            btn.onclick = function() {
-              // Show the Khalti checkout widget when the user clicks on the payment button
-              checkout.show({amount: 1000}); // Replace 1000 with your actual payment amount in paisa
-            };
-</script>
-<div id="payment-status" style="color: green; font-weight: bold; font-size: 18px;"></div>
-<style>
-    #payment-status {
-        color: green;
-        font-weight: bold;
-        font-size: 20px;
-    }
-</style>
-<div id="payment-status"></div>
+    </div>
+    </div>
+
 
 </body>
 

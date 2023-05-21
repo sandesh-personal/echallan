@@ -13,7 +13,7 @@ $i = $_POST['amount'];
 // Check if offence is "Custom Offense"
 if ($h == "Custom Offense") {
     // Retrieve value from custom_offense field
-    $h = $_POST['custom_offense']; //
+    $h = $_POST['custom_offense'];
     // Use $customOffense in your query or processing as needed
     // ...
 }
