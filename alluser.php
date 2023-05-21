@@ -10,39 +10,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All User</title>
 
-    <!--   Core JS Files   -->
-    <script src="assets/js/jquery.3.2.1.min.js" type="text/javascript"></script>
-    <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
-
-    <!--  Charts Plugin -->
-    <script src="assets/js/chartist.min.js"></script>
-
-    <!--  Notifications Plugin    -->
-    <script src="assets/js/bootstrap-notify.js"></script>
-
-    <!--  Google Maps Plugin    -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
-
-    <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
-    <script src="assets/js/light-bootstrap-dashboard.js?v=1.4.0"></script>
-
-    <!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
-    <script src="assets/js/demo.js"></script>
-
     </script>
     <script src="assets/js/script.js"></script>
     </script>
-    <!-- Bootstrap core CSS     -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
 
-    <!-- Animation library for notifications   -->
-    <link href="assets/css/animate.min.css" rel="stylesheet" />
-
-    <!--  Light Bootstrap Table core CSS    -->
-    <link href="assets/css/light-bootstrap-dashboard.css?v=1.4.0" rel="stylesheet" />
-
-
-    <!--  CSS for Demo Purpose, don't include it in your project     -->
     <link href="assets/css/demo.css" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css">
     <style>
@@ -65,8 +36,7 @@
     <form action="alluser.php" method="post">
         <label for="id">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
         <input type="text" id="myInput" name="id">
-        <!-- <label for="filter">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>  -->
-        <!-- <input type="text" name="filter" value="" id="myInput" placeholder="Search with Offence Id" /> -->
+
 
         <input type="submit" value="Search">
     </form>
@@ -165,10 +135,17 @@
                                         </tr>
                                         <tr>
                                             <td style="background-color:#3dd;">Date of Offense:</td>
-                                            <td><?php echo date('l jS \of F Y h:i:s A'); ?></td>
+                                            <td>
+                                            <?php date_default_timezone_set('Asia/Kathmandu');
+											echo date('l jS \of F Y h:i A');?></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="background-color:#3dd;">Pay Online:</td>
+                                            <td><?php echo '<button id="payment-button">Pay with Khalti</button>'; ?></td>
                                         </tr>
                                     </tbody>
                                 </table>
+                                <div id="payment-status"></div>
                             </div>
                         </div>
                     </div>
@@ -195,7 +172,56 @@
 
     </div>
     </div>
+    <script src="https://khalti.s3.ap-south-1.amazonaws.com/KPG/dist/2020.12.17.0.0.0/khalti-checkout.iffe.js"></script></script>
+    <script>
+        var config = {
+            // replace the publicKey with yours
+            "publicKey": "test_public_key_04d7d58897db4e159f83a66949d0d52c",
+            "productIdentity": "1234567890",
+              "productName": "Test Product",
+              "productUrl": "http://example.com/test-product",
+              "paymentPreference": [
+                "KHALTI",
+              ],
+              "eventHandler": {
+                onSuccess(payload) {
+                  // Handle successful payment
+                  console.log(payload);
+                  // Update the payment status message
+                  document.getElementById('payment-status').innerHTML = 'Payment successful!';
+                },
+                onError(error) {
+                  // Handle payment error
+                  console.log(error);
+                  // Update the payment status message
+                  document.getElementById('payment-status').innerHTML = 'Payment failed.';
+                },
+                onClose() {
+                  // Handle checkout widget close event
+                  console.log('Widget closed');
+                }
+                
+              }
+            };
 
+            var checkout = new KhaltiCheckout(config);
+            var btn = document.getElementById("payment-button");
+            btn.onclick = function() {
+              // Show the Khalti checkout widget when the user clicks on the payment button
+              checkout.show({amount: 1000}); // Replace 1000 with your actual payment amount in paisa
+            };
+</script>
+<div id="payment-status" style="color: green; font-weight: bold; font-size: 18px;"></div>
+<style>
+    #payment-status {
+        color: green;
+        font-weight: bold;
+        font-size: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+<div id="payment-status"></div>
 
 </body>
 
