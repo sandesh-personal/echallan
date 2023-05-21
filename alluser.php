@@ -65,8 +65,7 @@
     <form action="alluser.php" method="post">
         <label for="id">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
         <input type="text" id="myInput" name="id">
-        <!-- <label for="filter">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>  -->
-        <!-- <input type="text" name="filter" value="" id="myInput" placeholder="Search with Offence Id" /> -->
+
 
         <input type="submit" value="Search">
     </form>

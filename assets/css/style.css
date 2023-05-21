@@ -304,16 +304,10 @@ ul {
 /*-- //Reset-Code --*/
 
 body {
-    /* background: url(../images/b2.jpg); */
-    background-color: rgba(34, 133, 186, 0.817);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+    background: url(https://www.hikvision.com/content/hikvision/ar/newsroom/blog/beating-traffic-jams-with-intelligent-video-technology/_jcr_content/root/responsivegrid/image.coreimg.100.1280.jpeg/1681265736888/beating-traffic-jams-with-intelligent-video-technology.jpeg) no-repeat center/cover;
     min-height: 100vh;
 }
+
 
 .mid-cls {
     margin: 0px auto;
@@ -321,13 +315,7 @@ body {
 }
 
 .swm-right-w3ls {
-    background: rgba(21, 98, 139, 0.657);
-    position: absolute;
-    border-radius: 10px;
-    top: 10%;
-    left: 20%;
-    right: 20%;
-    bottom: 20%;
+
     /* display: flex; */
     justify-content: center;
     /* //padding: 3.5em 2em; */
@@ -336,6 +324,7 @@ body {
     -moz-box-shadow: -2px 7px 37px 8px rgba(0, 0, 0, 0.06);
     box-shadow: -2px 7px 37px 8px rgba(0, 0, 0, 0.06);
 }
+
 
 h1.header-w3ls {
     font-size: 46px;
@@ -385,13 +374,17 @@ h1.header-w3ls {
 }
 
 .icon-head h2 {
-    font-size: 24px;
-    color: #000;
+    font-size: 64px;
+    color: #ffffff;
     text-align: center;
-    border-bottom: 1px solid #Fff;
+    border-bottom: 1px solid #fff; /* Corrected capitalization of #fff */
     margin: 27px 0px 25px;
     padding-bottom: 10px;
+    font-family: "Helvetica Neue", Arial, sans-serif; /* Example of a nice font */
+    font-weight: bold; /* Making the text bold */
 }
+
+
 
 .form-right-w3ls input[type="password"],
 .form-left-w3l input[type="text"] {
@@ -437,7 +430,7 @@ h1.header-w3ls {
 
 button[type=submit] {
     width: 21%;
-    background: #0180c0;
+    background: #139ce6;
     outline: none;
     color: #fff;
     font-size: 14px;
