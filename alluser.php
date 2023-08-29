@@ -209,6 +209,7 @@
             btn.onclick = function() {
               // Show the Khalti checkout widget when the user clicks on the payment button
               checkout.show({amount: 1000}); // Replace 1000 with your actual payment amount in paisa
+// Replace 1000 with your actual payment amount in paisa
             };
 </script>
 <div id="payment-status" style="color: green; font-weight: bold; font-size: 18px;"></div>
@@ -224,5 +225,4 @@
 <div id="payment-status"></div>
 
 </body>
-
 </html>
