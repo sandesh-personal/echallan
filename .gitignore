@@ -1,0 +1,20 @@
+# Database credentials — never commit real config
+connect.php
+
+# Logs
+*.log
+error_log
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# PHP cache
+*.cache
